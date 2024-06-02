@@ -7,7 +7,9 @@ COPY package*.json ./
 # Install project dependencies
 RUN npm install
 COPY . .
+RUN apk add --no-cache bash git
 RUN node --version 
 EXPOSE 3000
-CMD ["npm","run","start"]
+ CMD [ "bash" ]
+# CMD ["npm","run","start"]
 
