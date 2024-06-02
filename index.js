@@ -17,7 +17,8 @@ const jokes = [
   "Why did the scarecrow win an award? Because he was outstanding in his field!",
 ];
 app.get("/", async (_, res) => {
-  res.json({ joke: jokes[Math.round(Math.random() * 10)] });
+  const id =Math.round(Math.random() * 10);
+  res.json({ id :id , joke: jokes[id] });
 });
 
 app.listen(port, () => {
